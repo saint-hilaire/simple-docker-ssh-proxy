@@ -1,3 +1,3 @@
-#!/bin/bash
-service ssh restart
-exec "$@"
+#!/bin/sh
+ssh-keygen -A
+exec /usr/sbin/sshd -D -e "$@"
